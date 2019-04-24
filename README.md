@@ -1,4 +1,3 @@
-# Memestry
 Unit 8 - Group Milestone - README
 ===
 
@@ -30,12 +29,12 @@ A curated ios app for posting & commenting on memes. Users can view others memes
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
+* User can post a meme
 * User can add a caption to a meme
 * User can comment a meme
 * User can like a meme
 * User can view latest 25 from meme feed
 * User can view global meme feed
-* User can delete the meme post
 
 **Optional Nice-to-have Stories**
 
@@ -44,28 +43,29 @@ A curated ios app for posting & commenting on memes. Users can view others memes
 * User can share the meme to Facebook or Twitter (Third-party integration)
 * User can use camera to click a photo and use as a meme
 * User can generate a meme from a picture
+* User can delete the meme post
 
 
 ### 2. Screen Archetypes
 
 * Login screen
    * User can login
-* SignUp screen
+* Registration screen
    * User can create an account
 * Forgot Password screen
     * User can give his email to get a temporary password
 * Profile screen
     * User can view memes that was previously posted
-* Global Feed Screen
+* Global Screen
     * User can see global feed
-* Home Screen
+* Feed Screen
     * User can view a meme 
     * User can view comments
     * User can delete meme
     * User can like a meme
     * User can share a meme (Optional)
     * User can scroll to refresh(Optional)
-* Camera Screen
+* Upload Screen
     * User can upload a meme
     * User can add a caption
     * User can post
@@ -74,28 +74,32 @@ A curated ios app for posting & commenting on memes. Users can view others memes
 **Tab Navigation** (Tab to Screen)
 * Profile screen
 * Global screen
-* Home Screen
-* Camera Screen
+
 
 
 **Flow Navigation** (Screen to Screen)
-* Login screen -> Home screen
-* SignUp screen -> Home screen
+* Login screen -> Global screen
+* Login screen -> Forgot Password screen
 * Global screen -> Feed screen
 * Global screen -> Upload screen
 
 ### 4. Wireframes
-<img src="http://g.recordit.co/o0OKsWGwjx.gif" width=250><br>
-#### LOGIN SCREEN
-<img src="https://i.imgur.com/cnPToVh.png" width=250><br>
-#### SIGNUP SCREEN
-<img src="https://i.imgur.com/mVYhyeD.png" width=250><br>
-#### GLOBAL FEED SCREEN (COLLECTION VIEW)
+<img src="http://g.recordit.co/o0OKsWGwjx.gif" width=250>
+
 <img src="https://i.imgur.com/n34rOBp.png" width=250><br>
-#### HOME SCREEN
+
 <img src="https://i.imgur.com/7wtbcV9.png" width=250><br>
-#### INTERACTIVE SCREEN
-<img src="http://g.recordit.co/zEDvUCynUv.gif" width=250><br>
+
+<img src="https://i.imgur.com/mVYhyeD.png" width=250><br>
+
+<img src="https://i.imgur.com/cnPToVh.png" width=250><br>
+
+
+
+![](https://i.imgur.com/n34rOBp.png)
+![](https://i.imgur.com/7wtbcV9.png)
+![](https://i.imgur.com/mVYhyeD.png)
+![](https://i.imgur.com/cnPToVh.png)
 
 
 
