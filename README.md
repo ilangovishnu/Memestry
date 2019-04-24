@@ -50,22 +50,22 @@ A curated ios app for posting & commenting on memes. Users can view others memes
 
 * Login screen
    * User can login
-* Registration screen
+* SignUp screen
    * User can create an account
 * Forgot Password screen
     * User can give his email to get a temporary password
 * Profile screen
     * User can view memes that was previously posted
-* Global Screen
+* Global Feed Screen
     * User can see global feed
-* Feed Screen
+* Home Screen
     * User can view a meme 
     * User can view comments
     * User can delete meme
     * User can like a meme
     * User can share a meme (Optional)
     * User can scroll to refresh(Optional)
-* Upload Screen
+* Camera Screen
     * User can upload a meme
     * User can add a caption
     * User can post
@@ -74,17 +74,21 @@ A curated ios app for posting & commenting on memes. Users can view others memes
 **Tab Navigation** (Tab to Screen)
 * Profile screen
 * Global screen
-
+* Home Screen
+* Camera Screen
 
 
 **Flow Navigation** (Screen to Screen)
-* Login screen -> Global screen
-* Login screen -> Forgot Password screen
+* Login screen -> Home screen
+* SignUp screen -> Home screen
 * Global screen -> Feed screen
 * Global screen -> Upload screen
 
 ### 4. Wireframes
 <img src="http://g.recordit.co/o0OKsWGwjx.gif" width=250><br>
+
+<img src="http://g.recordit.co/zEDvUCynUv.gif" width=250><br>
+
 
 ## Schema 
 [This section will be completed in Unit 9]
