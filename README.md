@@ -30,13 +30,13 @@ A curated ios app for posting & commenting on memes. Users can view others memes
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
-* User can login
-* User can post a meme
-* User can add a caption to a meme
-* User can comment a meme
-* User can like a meme
-* User can view latest 25 from meme feed
-* User can view global meme feed
+- [x] User can login
+- [ ] User can post a meme
+- [ ] User can add a caption to a meme
+- [ ] User can comment a meme
+- [ ] User can like a meme
+- [ ] User can view latest 25 from meme feed
+- [ ] User can view global meme feed
 
 
 **Optional Nice-to-have Stories**
