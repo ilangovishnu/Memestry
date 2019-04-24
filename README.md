@@ -86,8 +86,17 @@ A curated ios app for posting & commenting on memes. Users can view others memes
 
 ### 4. Wireframes
 <img src="http://g.recordit.co/o0OKsWGwjx.gif" width=250><br>
-
+#### LOGIN SCREEN
+<img src="https://i.imgur.com/cnPToVh.png" width=250><br>
+#### SIGNUP SCREEN
+<img src="https://i.imgur.com/mVYhyeD.png" width=250><br>
+#### GLOBAL FEED SCREEN (COLLECTION VIEW)
+<img src="https://i.imgur.com/n34rOBp.png" width=250><br>
+#### HOME SCREEN
+<img src="https://i.imgur.com/7wtbcV9.png" width=250><br>
+#### INTERACTIVE SCREEN
 <img src="http://g.recordit.co/zEDvUCynUv.gif" width=250><br>
+
 
 
 ## Schema 
