@@ -30,12 +30,13 @@ A curated ios app for posting & commenting on memes. Users can view others memes
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
+* User can post a meme
 * User can add a caption to a meme
 * User can comment a meme
 * User can like a meme
 * User can view latest 25 from meme feed
 * User can view global meme feed
-* User can delete the meme post
+
 
 **Optional Nice-to-have Stories**
 
@@ -44,6 +45,7 @@ A curated ios app for posting & commenting on memes. Users can view others memes
 * User can share the meme to Facebook or Twitter (Third-party integration)
 * User can use camera to click a photo and use as a meme
 * User can generate a meme from a picture
+* User can delete the meme post
 
 
 ### 2. Screen Archetypes
