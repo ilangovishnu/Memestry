@@ -101,50 +101,32 @@ A curated ios app for posting & commenting on memes. Users can view others memes
 <img src="http://g.recordit.co/zEDvUCynUv.gif" width=250><br>
 
 
-
+ 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
-#### Reminder
+#### Post
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   | Time Zone     | String   | the time zone of the author |
-   | Time        | DateTime| time at which the reminder must pop up |
-   | Test Reminder         | String    | the reminder message |
-   
-#### Friends
+   | objectId      | String   | unique id for the user post (default field) |
+   | author        | Pointer to User| image author |
+   | image         | File     | image that user posts |
+   | caption       | String   | image caption by author |
 
-   | Property      | Type     | Description |
-   | ------------- | -------- | ------------|
-   | Name    | String   | the name of the friend |
-   | Nickname        | String | nickname of the friend |
-   | Birthday         | DateTime    | the birthday of the friend |
-   | Anniversary         | DateTime    | the anniversary of the friend |
-   
 ### Networking
-- [Add list of network requests by screen ]
-   - History Screen
-      - (Read/GET) Get a list of all reminders
-      - (Read/GET) Get a list of all greetings
-   - Home Feed Screen
-      - (Create/POST) Create a new greeting
-      - (Create/POST) Create a new reminder
-      - (Read/GET) Get a list of all friends
-      - (Read/GET) Get a list of all reminders already set
-      - (Read/GET) Get a list of all greetings already set
-   - Friends List Screen
-      - (Read/GET) Display a list of all friends 
-      - (Create/POST) Add a new friend
-   - New Friend Screen
-      - (Update/PUT) Provide the name
-      - (Update/PUT) Provide the nickname
-      - (Update/PUT) Provide the date for birthday/anniversary or any other important day
-   - Custom design Screen
-      - (Create/POST) Create a new custom greeting specifying the name of the receiver, message, and a background image
-   - Creation Screen
-      - (Create/POST) Create a new birthday greeting
-      - (Create/POST) Create a new anniversary greeting
-      - (Create/POST) Create a custom greeting
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+#### List of network requests by screen
+   - Profile Screen
+      - (Read/GET) Query all memes where user is author
+      - (Create/POST) Create a new like on a meme
+      - (Delete) Delete existing like
+      - (Create/POST) Create a new comment on a meme
+   - Camera Screen
+      - (Create/POST) Create a new meme object
+      - (Create/POST) Create a caption for a meme
+   - Global Feed Screen
+      - (Read/GET) Query all memes by various users
+      - (Create/POST) Create a new like on a meme
+      - (Delete) Delete existing like
+      - (Create/POST) Create a new comment on a meme
+
+
