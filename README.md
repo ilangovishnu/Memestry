@@ -31,6 +31,11 @@ A curated ios app for posting & commenting on memes. Users can view others memes
 
 **Required Must-have Stories**
 - [x] User can login
+- [x] User can logout
+- [x] User can create account
+- [x] User can navigate
+- [x] User can set profile picture
+- [x] User data stored in Firebase
 - [ ] User can post a meme
 - [ ] User can add a caption to a meme
 - [ ] User can comment a meme
