@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
 
@@ -15,16 +16,25 @@ class HomeViewController: UIViewController {
         //view.backgroundColor = UIColor.yellow
         // Do any additional setup after loading the view.
     }
+
     
+    
+    @IBAction func logout_TouchUpInside(_ sender: Any) {
+        //print(Auth.auth().currentUser!)
+        do{
+            try Auth.auth().signOut()
+        }
+        catch let logoutError {
 
-    /*
-    // MARK: - Navigation
+            print(logoutError)
+        }
+        //print(Auth.auth().currentUser!)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let storyboard = UIStoryboard(name: "Start", bundle: nil)
+        let loginVC = storyboard.instantiateViewController(withIdentifier:  "LoginViewController")
+
+        self.present(loginVC, animated: true, completion: nil)
     }
-    */
+
 
 }

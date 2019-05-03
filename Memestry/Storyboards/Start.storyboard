@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="d24-7e-0z3">
             <objects>
-                <viewController id="xct-fJ-ZRa" customClass="LoginViewController" customModule="Memestry" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="xct-fJ-ZRa" customClass="LoginViewController" customModule="Memestry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="szH-ks-X6C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,7 @@
                                     <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Av0-Ms-f4h" kind="presentation" id="iBX-bO-MQQ"/>
+                                    <action selector="loginButton_TouchUpInside:" destination="xct-fJ-ZRa" eventType="touchUpInside" id="ieg-fT-dXU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Memestry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BlF-WD-8Jm">
@@ -67,7 +67,9 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="nrG-2W-tv8" id="xca-XC-NaM"/>
+                        <outlet property="loginButton" destination="7I8-tx-vsL" id="iLL-BG-j6e"/>
                         <outlet property="passwordTextField" destination="rYR-ig-ZSh" id="65z-Bs-Pie"/>
+                        <segue destination="Av0-Ms-f4h" kind="presentation" identifier="loginTabbarVC" id="VR8-um-hAO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="99J-bw-dCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -114,7 +116,7 @@
                                     <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Av0-Ms-f4h" kind="presentation" id="7d9-zD-PKx"/>
+                                    <action selector="signUpBtn_TouchUpInside:" destination="dM8-uT-Uta" eventType="touchUpInside" id="RUV-ZA-002"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUk-cU-dWB">
@@ -124,7 +126,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile-icon" translatesAutoresizingMaskIntoConstraints="NO" id="iq6-hO-aBD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile-icon" highlightedImage="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="iq6-hO-aBD">
                                 <rect key="frame" x="118" y="71" width="164" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -136,7 +138,9 @@
                         <outlet property="emailTextField" destination="X0Z-Rh-0aF" id="3GM-hu-gJz"/>
                         <outlet property="passwordTextField" destination="hJc-mq-Cvb" id="4Ob-ck-EbQ"/>
                         <outlet property="profilePicture" destination="iq6-hO-aBD" id="uuq-sg-8Xw"/>
+                        <outlet property="signUpButton" destination="Ikz-ZW-wT3" id="pp1-If-dDl"/>
                         <outlet property="usernameTextField" destination="mUk-cU-dWB" id="Krs-Bj-qTE"/>
+                        <segue destination="Av0-Ms-f4h" kind="presentation" identifier="signUpToTabbarVC" id="aYB-Vy-0bz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wbi-Ug-wKI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -149,13 +153,14 @@
                 <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="TabBarId" id="Av0-Ms-f4h" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lMM-XQ-hWy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="258" y="-577"/>
+            <point key="canvasLocation" x="-885" y="-267"/>
         </scene>
     </scenes>
     <resources>
+        <image name="image_placeholder" width="375" height="375"/>
         <image name="profile-icon" width="26" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7d9-zD-PKx"/>
+        <segue reference="aYB-Vy-0bz"/>
     </inferredMetricsTieBreakers>
 </document>

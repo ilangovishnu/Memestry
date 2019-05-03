@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28F6EF004011606E5EAFA5CF /* Pods_MemestryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1942702857B7EA54D91DA47 /* Pods_MemestryTests.framework */; };
+		307456116308015C147FB26F /* Pods_Memestry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B565C1F37E13BE98447679 /* Pods_Memestry.framework */; };
+		CF2A0371E4AAC95A84D6D4AE /* Pods_MemestryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F446D6DB939DD89163330631 /* Pods_MemestryUITests.framework */; };
 		DE7304E4226F784800F31C25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7304E3226F784800F31C25 /* AppDelegate.swift */; };
 		DE7304E6226F784800F31C25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7304E5226F784800F31C25 /* ViewController.swift */; };
 		DE7304EB226F784A00F31C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE7304EA226F784A00F31C25 /* Assets.xcassets */; };
@@ -25,6 +28,8 @@
 		DE730524226FC2C300F31C25 /* GlobalFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE730523226FC2C300F31C25 /* GlobalFeed.storyboard */; };
 		DE730526226FC37700F31C25 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE730525226FC37700F31C25 /* Camera.storyboard */; };
 		DE730528226FC3D000F31C25 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE730527226FC3D000F31C25 /* Profile.storyboard */; };
+		DEBC168F22727328007DB0C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEBC168E22727328007DB0C7 /* GoogleService-Info.plist */; };
+		DEF6E18A227B8586006F60B1 /* MemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF6E189227B8586006F60B1 /* MemeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02A2E970413BC44C0B3B76C6 /* Pods-MemestryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemestryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemestryTests/Pods-MemestryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		262A79BF9C7DE9E00FDB7BAD /* Pods-MemestryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemestryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemestryUITests/Pods-MemestryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		34C6AF655AABDECD4D6D150C /* Pods-Memestry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memestry.release.xcconfig"; path = "Pods/Target Support Files/Pods-Memestry/Pods-Memestry.release.xcconfig"; sourceTree = "<group>"; };
+		48B565C1F37E13BE98447679 /* Pods_Memestry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memestry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E1B97F46EAD0B5370812700 /* Pods-MemestryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemestryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemestryTests/Pods-MemestryTests.release.xcconfig"; sourceTree = "<group>"; };
+		911A45693F2EB68BECE6AB9F /* Pods-MemestryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemestryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemestryUITests/Pods-MemestryUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AF00D8106A5818CD54D0D91B /* Pods-Memestry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memestry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Memestry/Pods-Memestry.debug.xcconfig"; sourceTree = "<group>"; };
+		D1942702857B7EA54D91DA47 /* Pods_MemestryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemestryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7304E0226F784800F31C25 /* Memestry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memestry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7304E3226F784800F31C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE7304E5226F784800F31C25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +73,7 @@
 		DE730511226F78DA00F31C25 /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
 		DE730513226F7D2300F31C25 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DE730515226F86F000F31C25 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		DE730517226FA93B00F31C25 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DE730517226FA93B00F31C25 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DE730519226FAA0B00F31C25 /* GlobalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewController.swift; sourceTree = "<group>"; };
 		DE73051B226FAA2300F31C25 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		DE73051D226FAA3600F31C25 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +82,9 @@
 		DE730523226FC2C300F31C25 /* GlobalFeed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GlobalFeed.storyboard; sourceTree = "<group>"; };
 		DE730525226FC37700F31C25 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		DE730527226FC3D000F31C25 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		DEBC168E22727328007DB0C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DEF6E189227B8586006F60B1 /* MemeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCell.swift; sourceTree = "<group>"; };
+		F446D6DB939DD89163330631 /* Pods_MemestryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemestryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				307456116308015C147FB26F /* Pods_Memestry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28F6EF004011606E5EAFA5CF /* Pods_MemestryTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,19 +108,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF2A0371E4AAC95A84D6D4AE /* Pods_MemestryUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64D5E78B2427E9D98BA29465 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF00D8106A5818CD54D0D91B /* Pods-Memestry.debug.xcconfig */,
+				34C6AF655AABDECD4D6D150C /* Pods-Memestry.release.xcconfig */,
+				02A2E970413BC44C0B3B76C6 /* Pods-MemestryTests.debug.xcconfig */,
+				4E1B97F46EAD0B5370812700 /* Pods-MemestryTests.release.xcconfig */,
+				262A79BF9C7DE9E00FDB7BAD /* Pods-MemestryUITests.debug.xcconfig */,
+				911A45693F2EB68BECE6AB9F /* Pods-MemestryUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		651362D5A881B9CF10DE4EB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48B565C1F37E13BE98447679 /* Pods_Memestry.framework */,
+				D1942702857B7EA54D91DA47 /* Pods_MemestryTests.framework */,
+				F446D6DB939DD89163330631 /* Pods_MemestryUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DE7304D7226F784700F31C25 = {
 			isa = PBXGroup;
 			children = (
+				DEF6E189227B8586006F60B1 /* MemeCell.swift */,
 				DE7304E2226F784800F31C25 /* Memestry */,
 				DE7304F7226F784B00F31C25 /* MemestryTests */,
 				DE730502226F784B00F31C25 /* MemestryUITests */,
 				DE7304E1226F784800F31C25 /* Products */,
+				64D5E78B2427E9D98BA29465 /* Pods */,
+				651362D5A881B9CF10DE4EB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +170,7 @@
 				DE7304EC226F784A00F31C25 /* LaunchScreen.storyboard */,
 				DE7304EA226F784A00F31C25 /* Assets.xcassets */,
 				DE7304EF226F784A00F31C25 /* Info.plist */,
+				DEBC168E22727328007DB0C7 /* GoogleService-Info.plist */,
 			);
 			path = Memestry;
 			sourceTree = "<group>";
@@ -181,9 +227,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE730508226F784B00F31C25 /* Build configuration list for PBXNativeTarget "Memestry" */;
 			buildPhases = (
+				320A91F22AFC15EFA4CD31A1 /* [CP] Check Pods Manifest.lock */,
 				DE7304DC226F784700F31C25 /* Sources */,
 				DE7304DD226F784700F31C25 /* Frameworks */,
 				DE7304DE226F784700F31C25 /* Resources */,
+				561D55B73EEFE414990F9089 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,6 +246,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE73050B226F784B00F31C25 /* Build configuration list for PBXNativeTarget "MemestryTests" */;
 			buildPhases = (
+				E6F597EFCFB2208DE6C4DCDB /* [CP] Check Pods Manifest.lock */,
 				DE7304F0226F784B00F31C25 /* Sources */,
 				DE7304F1226F784B00F31C25 /* Frameworks */,
 				DE7304F2226F784B00F31C25 /* Resources */,
@@ -216,6 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE73050E226F784B00F31C25 /* Build configuration list for PBXNativeTarget "MemestryUITests" */;
 			buildPhases = (
+				1A7583E3F2E22032D822E247 /* [CP] Check Pods Manifest.lock */,
 				DE7304FB226F784B00F31C25 /* Sources */,
 				DE7304FC226F784B00F31C25 /* Frameworks */,
 				DE7304FD226F784B00F31C25 /* Resources */,
@@ -280,6 +330,7 @@
 			files = (
 				DE7304EE226F784A00F31C25 /* LaunchScreen.storyboard in Resources */,
 				DE730526226FC37700F31C25 /* Camera.storyboard in Resources */,
+				DEBC168F22727328007DB0C7 /* GoogleService-Info.plist in Resources */,
 				DE730528226FC3D000F31C25 /* Profile.storyboard in Resources */,
 				DE730522226FC21000F31C25 /* Home.storyboard in Resources */,
 				DE7304EB226F784A00F31C25 /* Assets.xcassets in Resources */,
@@ -305,11 +356,113 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A7583E3F2E22032D822E247 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MemestryUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		320A91F22AFC15EFA4CD31A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Memestry-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		561D55B73EEFE414990F9089 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Memestry/Pods-Memestry-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Memestry/Pods-Memestry-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6F597EFCFB2208DE6C4DCDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MemestryTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DE7304DC226F784700F31C25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEF6E18A227B8586006F60B1 /* MemeCell.swift in Sources */,
 				DE730518226FA93B00F31C25 /* HomeViewController.swift in Sources */,
 				DE73051A226FAA0B00F31C25 /* GlobalViewController.swift in Sources */,
 				DE730514226F7D2300F31C25 /* LoginViewController.swift in Sources */,
@@ -482,6 +635,7 @@
 		};
 		DE730509226F784B00F31C25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF00D8106A5818CD54D0D91B /* Pods-Memestry.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -501,6 +655,7 @@
 		};
 		DE73050A226F784B00F31C25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34C6AF655AABDECD4D6D150C /* Pods-Memestry.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -520,6 +675,7 @@
 		};
 		DE73050C226F784B00F31C25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02A2E970413BC44C0B3B76C6 /* Pods-MemestryTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +696,7 @@
 		};
 		DE73050D226F784B00F31C25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E1B97F46EAD0B5370812700 /* Pods-MemestryTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -560,6 +717,7 @@
 		};
 		DE73050F226F784B00F31C25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 262A79BF9C7DE9E00FDB7BAD /* Pods-MemestryUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -579,6 +737,7 @@
 		};
 		DE730510226F784B00F31C25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 911A45693F2EB68BECE6AB9F /* Pods-MemestryUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

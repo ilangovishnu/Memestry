@@ -1,0 +1,6 @@
+framework module Pods_MemestryUITests {
+  umbrella header "Pods-MemestryUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
