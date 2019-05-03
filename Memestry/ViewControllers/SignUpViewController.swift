@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
 
-class SignUpViewController: UIViewController {
+@objcMembers class SignUpViewController: UIViewController {
     
     
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var signUpButton: UIButton!
+    
+    var selectedImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +54,44 @@ class SignUpViewController: UIViewController {
         
         profilePicture.layer.cornerRadius = 40
         profilePicture.clipsToBounds = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.handleSelectProfileImageView))
+        profilePicture.addGestureRecognizer(tapGesture)
+        profilePicture.isUserInteractionEnabled = true
+        //signUpButton.isEnabled = false
+        
+        handleTextField()
 
+    }
+    
+    
+    func handleTextField() {
+        usernameTextField.addTarget(self, action: #selector(SignUpViewController.textFieldDidChange), for: UIControl.Event.editingChanged)
+        emailTextField.addTarget(self, action: #selector(SignUpViewController.textFieldDidChange), for: UIControl.Event.editingChanged)
+        passwordTextField.addTarget(self, action: #selector(SignUpViewController.textFieldDidChange), for: UIControl.Event.editingChanged)
+
+    }
+    
+    func textFieldDidChange() {
+        guard let username = usernameTextField.text, !username.isEmpty, let email = emailTextField.text, !email.isEmpty, let password = passwordTextField.text, !password.isEmpty else {
+            
+            signUpButton.setTitleColor(UIColor.lightText, for: UIControl.State.normal)
+            signUpButton.isEnabled = false
+            return
+        }
+        signUpButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        signUpButton.isEnabled = true
+    }
+    
+    
+     func handleSelectProfileImageView() {
+        
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        present(pickerController, animated: true, completion: nil)
+        
+        //print("Tapped")
+        
     }
     
     @IBAction func dismiss_onClick(_ sender: Any) {
@@ -55,14 +99,72 @@ class SignUpViewController: UIViewController {
     }
     
     
-    /*
-    // MARK: - Navigation
+    @IBAction func signUpBtn_TouchUpInside(_ sender: Any) {
+        
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion:
+            
+            { (user , error) in
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+                if error  != nil {
+                    print(error!.localizedDescription)
+                    return
+                    }
+                let uid = Auth.auth().currentUser?.uid
+                let storageRef = Storage.storage().reference(forURL: "gs://memestry-1b5b0.appspot.com").child("profile_picture").child(uid!)
+                if let profileImg = self.selectedImage, let imageData = profileImg.jpegData(compressionQuality: 0.1){
+                    storageRef.putData(imageData, metadata: nil, completion: {(metadata, error) in
+                        if error != nil {
+                            return
+                        }
+                    
+                        storageRef.downloadURL(completion: { (url, error) in
+                            
+                            if let profileImageUrl = url?.absoluteString {
+                                let ref = Database.database().reference()
+                                let usersReference = ref.child("users")
+                                //                        print (usersReference.description())
+                                let newUserReference = usersReference.child(uid!)
+                                newUserReference.setValue(["username": self.usernameTextField.text!, "email": self.emailTextField.text!, "profileImageUrl" : profileImageUrl])
+                                self.performSegue(withIdentifier: "signUpToTabbarVC", sender: nil)
+
+                                
+                            }
+                            
+                        }
+                       
+                        )
+                        
+                    })
+                }
+                
+
+        })
+    
+    
+    
     }
-    */
-
+    
+    
 }
+    extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+        @nonobjc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
+            if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+            selectedImage = image
+            profilePicture.image = image
+            }
+            //profilePicture.image = infoPhoto
+            dismiss(animated: true, completion: nil)
+        
+        }
+        
+    }
+    
+
+    
+
+
+
+
+
+
+
