@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import ProgressHUD
 
 @objcMembers class LoginViewController: UIViewController {
     
@@ -35,23 +36,16 @@ import FirebaseAuth
         bottomLayerPassword.backgroundColor = UIColor(red: 50/255, green: 50/255, blue: 25/255, alpha: 1).cgColor
         passwordTextField.layer.addSublayer(bottomLayerPassword)
         
-        //loginButton.isEnabled = false
+        loginButton.isEnabled = false
         
         handleTextField()
         
-        // Do any additional setup after loading the view.
-//        if Auth.auth().currentUser != nil {
-//            print("Current user: \(String(describing: Auth.auth().currentUser))")
-//            Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { (timer) in
-//
-//                self.performSegue(withIdentifier: "loginTabbarVC", sender: nil)
-//
-//
-//            })
         
-            
-   //     }
-        
+    }
+    
+    //Dismiss Keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,8 +57,8 @@ import FirebaseAuth
     
     func handleTextField() {
     
-        emailTextField.addTarget(self, action: #selector(LoginViewController.textFieldDidChange), for: UIControl.Event.editingChanged)
-        passwordTextField.addTarget(self, action: #selector(LoginViewController.textFieldDidChange), for: UIControl.Event.editingChanged)
+        emailTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControl.Event.editingChanged)
+        passwordTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControl.Event.editingChanged)
         
     }
     
@@ -83,15 +77,22 @@ import FirebaseAuth
     
     
     @IBAction func loginButton_TouchUpInside(_ sender: Any) {
+        view.endEditing(true)
+        ProgressHUD.show("Waiting...",interaction: false)
+
+        AuthService.signIn(email: emailTextField.text!, password: passwordTextField.text!, onSuccess: { ProgressHUD.showSuccess("Success")
+            self.performSegue(withIdentifier: "loginTabbarVC", sender: nil)},
+                           onError: { error in ProgressHUD.showError("Incorrect email or password")})
         
-        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user,error) in
-            if error != nil {
-                print(error!.localizedDescription)
-                return
-            }
-            
-            self.performSegue(withIdentifier: "loginTabbarVC", sender: nil)
-        })
+//{ error in ProgressHUD.showError("Incorrect email or password")}
+//        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user,error) in
+//            if error != nil {
+//                print(error!.localizedDescription)
+//                return
+//            }
+//            
+//            self.performSegue(withIdentifier: "loginTabbarVC", sender: nil)
+//        })
     }
     
     

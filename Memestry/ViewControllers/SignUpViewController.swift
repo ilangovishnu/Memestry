@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
+import ProgressHUD
 
 @objcMembers class SignUpViewController: UIViewController {
     
@@ -55,20 +56,23 @@ import FirebaseStorage
         profilePicture.layer.cornerRadius = 40
         profilePicture.clipsToBounds = true
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.handleSelectProfileImageView))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleSelectProfileImageView))
         profilePicture.addGestureRecognizer(tapGesture)
         profilePicture.isUserInteractionEnabled = true
-        //signUpButton.isEnabled = false
+        signUpButton.isEnabled = false
         
         handleTextField()
 
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
     
     func handleTextField() {
-        usernameTextField.addTarget(self, action: #selector(SignUpViewController.textFieldDidChange), for: UIControl.Event.editingChanged)
-        emailTextField.addTarget(self, action: #selector(SignUpViewController.textFieldDidChange), for: UIControl.Event.editingChanged)
-        passwordTextField.addTarget(self, action: #selector(SignUpViewController.textFieldDidChange), for: UIControl.Event.editingChanged)
+        usernameTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControl.Event.editingChanged)
+        emailTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControl.Event.editingChanged)
+        passwordTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControl.Event.editingChanged)
 
     }
     
@@ -101,12 +105,17 @@ import FirebaseStorage
     
     @IBAction func signUpBtn_TouchUpInside(_ sender: Any) {
         
+        view.endEditing(true)
+        ProgressHUD.show("Waiting...",interaction: false)
+
+        
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion:
             
             { (user , error) in
 
                 if error  != nil {
                     print(error!.localizedDescription)
+                    //ProgressHUD.show(error!.localizedDescription)
                     return
                     }
                 let uid = Auth.auth().currentUser?.uid
@@ -147,12 +156,11 @@ import FirebaseStorage
     
 }
     extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-        @nonobjc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
+        @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
             if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             selectedImage = image
             profilePicture.image = image
             }
-            //profilePicture.image = infoPhoto
             dismiss(animated: true, completion: nil)
         
         }

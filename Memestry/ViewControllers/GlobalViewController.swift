@@ -16,7 +16,7 @@ class GlobalViewController: UIViewController, UITableViewDataSource, UITableView
     //MARK: Outlets
     
     @IBOutlet var tableView: UITableView!
-    //let images = ["a","b","c"]
+   
     var memes = [[String: Any]]()
     
      override func viewDidLoad() {
@@ -25,7 +25,9 @@ class GlobalViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.delegate = self
         //view.backgroundColor = UIColor.blue
         // Do any additional setup after loading the view.
-        let url = URL(string: "https://api.giphy.com/v1/gifs/trending?api_key=0Fn6uXrY8pgsMbxZoyjRID0P1ZuxdOEA&limit=5&rating=G")!
+        //https://api.giphy.com/v1/gifs/search?api_key=0Fn6uXrY8pgsMbxZoyjRID0P1ZuxdOEA&q=memes
+        //https://api.tumblr.com/v2/tagged?tag=meme&api_key=Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV
+        let url = URL(string: "https://api.tumblr.com/v2/blog/daily-meme.tumblr.com/posts/photo?api_key=Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV")!
         
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
@@ -35,8 +37,9 @@ class GlobalViewController: UIViewController, UITableViewDataSource, UITableView
                 print(error.localizedDescription)
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                
-                self.memes = dataDictionary["data"] as! [[String: Any]]
+               let responseDictionary = dataDictionary["response"] as! [String: Any]
+                //data //response
+                self.memes = responseDictionary["posts"] as! [[String: Any]]
 
                 // Store the returned array of dictionaries in our posts property
                 self.tableView.reloadData()
@@ -58,19 +61,35 @@ class GlobalViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemeCell", for: indexPath) as! MemeCell
         //  let post = posts[indexPath.row]
         let meme = memes[indexPath.row]
-        //let title = movie["title"] as! String
-       // let synopsis = movie["overview"] as! String
         
         
-        //cell.titleLabel.text = title
-        //cell.synopsisLabel.text = synopsis
+        //let baseUrl = "http://giphy.com/gifs/"
+        //let posterPath = meme["url"] as! String
+        //let posterUrl = URL(string: baseUrl + posterPath)
+       // let posterUrl = URL(string: posterPath)
+
         
-        let baseUrl = "http://giphy.com/gifs/"
-        let posterPath = meme["url"] as! String
-        let posterUrl = URL(string: baseUrl + posterPath)
+       // cell.posterView.af_setImage(withURL: posterUrl!)
         
-        cell.posterView.af_setImage(withURL: posterUrl!)
+        //images ,fixed_height_small_still, 3
+        if let photos = meme["photos"] as? [[String: Any]] {
+            let photo = photos[0]
+            let originalSize = photo["original_size"] as! [String: Any]
+            let urlString = originalSize["url"] as! String
+            let url = URL(string: urlString)
+            cell.posterView.af_setImage(withURL: url!)
         
+        }
+        
+        
+//        if let photos = meme["images"] as? [[String: Any]] {
+//            let photo = photos[3]
+//            let originalSize = photo["fixed_height_small_still"] as! [String: Any]
+//            let urlString = originalSize["url"] as! String
+//            let url = URL(string: urlString)
+//            cell.posterView.af_setImage(withURL: url!)
+//        }
+//
         return cell
     }
 
