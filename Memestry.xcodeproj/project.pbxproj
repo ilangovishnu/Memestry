@@ -10,6 +10,7 @@
 		28F6EF004011606E5EAFA5CF /* Pods_MemestryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1942702857B7EA54D91DA47 /* Pods_MemestryTests.framework */; };
 		307456116308015C147FB26F /* Pods_Memestry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B565C1F37E13BE98447679 /* Pods_Memestry.framework */; };
 		CF2A0371E4AAC95A84D6D4AE /* Pods_MemestryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F446D6DB939DD89163330631 /* Pods_MemestryUITests.framework */; };
+		DE3C1C842282AE2D00DB3FDF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3C1C832282AE2D00DB3FDF /* Post.swift */; };
 		DE7304E4226F784800F31C25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7304E3226F784800F31C25 /* AppDelegate.swift */; };
 		DE7304E6226F784800F31C25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7304E5226F784800F31C25 /* ViewController.swift */; };
 		DE7304EB226F784A00F31C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE7304EA226F784A00F31C25 /* Assets.xcassets */; };
@@ -28,7 +29,11 @@
 		DE730524226FC2C300F31C25 /* GlobalFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE730523226FC2C300F31C25 /* GlobalFeed.storyboard */; };
 		DE730526226FC37700F31C25 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE730525226FC37700F31C25 /* Camera.storyboard */; };
 		DE730528226FC3D000F31C25 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE730527226FC3D000F31C25 /* Profile.storyboard */; };
+		DE8DA3FF2280CB090060D6C9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DA3FE2280CB090060D6C9 /* AuthService.swift */; };
+		DE9FB22722855BAA0024FB23 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9FB22622855BAA0024FB23 /* PostCell.swift */; };
 		DEBC168F22727328007DB0C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEBC168E22727328007DB0C7 /* GoogleService-Info.plist */; };
+		DEE88E6B2284A26800B98A35 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE88E6A2284A26800B98A35 /* UserCell.swift */; };
+		DEE88E6D2284F3D700B98A35 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE88E6C2284F3D700B98A35 /* User.swift */; };
 		DEF6E18A227B8586006F60B1 /* MemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF6E189227B8586006F60B1 /* MemeCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +63,7 @@
 		911A45693F2EB68BECE6AB9F /* Pods-MemestryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemestryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemestryUITests/Pods-MemestryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AF00D8106A5818CD54D0D91B /* Pods-Memestry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memestry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Memestry/Pods-Memestry.debug.xcconfig"; sourceTree = "<group>"; };
 		D1942702857B7EA54D91DA47 /* Pods_MemestryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemestryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3C1C832282AE2D00DB3FDF /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		DE7304E0226F784800F31C25 /* Memestry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memestry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7304E3226F784800F31C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE7304E5226F784800F31C25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +80,7 @@
 		DE730513226F7D2300F31C25 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DE730515226F86F000F31C25 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DE730517226FA93B00F31C25 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DE730519226FAA0B00F31C25 /* GlobalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewController.swift; sourceTree = "<group>"; };
+		DE730519226FAA0B00F31C25 /* GlobalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DE73051B226FAA2300F31C25 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		DE73051D226FAA3600F31C25 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DE73051F226FB34600F31C25 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -82,7 +88,11 @@
 		DE730523226FC2C300F31C25 /* GlobalFeed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GlobalFeed.storyboard; sourceTree = "<group>"; };
 		DE730525226FC37700F31C25 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		DE730527226FC3D000F31C25 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		DE8DA3FE2280CB090060D6C9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		DE9FB22622855BAA0024FB23 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		DEBC168E22727328007DB0C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DEE88E6A2284A26800B98A35 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		DEE88E6C2284F3D700B98A35 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DEF6E189227B8586006F60B1 /* MemeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCell.swift; sourceTree = "<group>"; };
 		F446D6DB939DD89163330631 /* Pods_MemestryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemestryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -138,10 +148,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DE3C1C822282AE0700DB3FDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE3C1C832282AE2D00DB3FDF /* Post.swift */,
+				DEE88E6C2284F3D700B98A35 /* User.swift */,
+				DEE88E6A2284A26800B98A35 /* UserCell.swift */,
+				DEF6E189227B8586006F60B1 /* MemeCell.swift */,
+				DE9FB22622855BAA0024FB23 /* PostCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DE7304D7226F784700F31C25 = {
 			isa = PBXGroup;
 			children = (
-				DEF6E189227B8586006F60B1 /* MemeCell.swift */,
+				DE8DA3FE2280CB090060D6C9 /* AuthService.swift */,
 				DE7304E2226F784800F31C25 /* Memestry */,
 				DE7304F7226F784B00F31C25 /* MemestryTests */,
 				DE730502226F784B00F31C25 /* MemestryUITests */,
@@ -164,6 +186,7 @@
 		DE7304E2226F784800F31C25 /* Memestry */ = {
 			isa = PBXGroup;
 			children = (
+				DE3C1C822282AE0700DB3FDF /* Model */,
 				DE7304E3226F784800F31C25 /* AppDelegate.swift */,
 				DE73052A226FD99700F31C25 /* ViewControllers */,
 				DE730529226FD93600F31C25 /* Storyboards */,
@@ -414,6 +437,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -425,6 +449,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -462,13 +487,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE88E6D2284F3D700B98A35 /* User.swift in Sources */,
 				DEF6E18A227B8586006F60B1 /* MemeCell.swift in Sources */,
+				DE3C1C842282AE2D00DB3FDF /* Post.swift in Sources */,
 				DE730518226FA93B00F31C25 /* HomeViewController.swift in Sources */,
 				DE73051A226FAA0B00F31C25 /* GlobalViewController.swift in Sources */,
 				DE730514226F7D2300F31C25 /* LoginViewController.swift in Sources */,
 				DE7304E6226F784800F31C25 /* ViewController.swift in Sources */,
+				DE9FB22722855BAA0024FB23 /* PostCell.swift in Sources */,
 				DE73051C226FAA2300F31C25 /* CameraViewController.swift in Sources */,
 				DE730516226F86F000F31C25 /* SignUpViewController.swift in Sources */,
+				DEE88E6B2284A26800B98A35 /* UserCell.swift in Sources */,
+				DE8DA3FF2280CB090060D6C9 /* AuthService.swift in Sources */,
 				DE73051E226FAA3600F31C25 /* ProfileViewController.swift in Sources */,
 				DE7304E4226F784800F31C25 /* AppDelegate.swift in Sources */,
 			);

@@ -7,11 +7,13 @@
 //
 
 import UIKit
+//import FLAnimatedImage
 
 class MemeCell: UITableViewCell {
     
     
     @IBOutlet weak var posterView: UIImageView!
+    //@IBOutlet weak var posterView: FLAnimatedImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

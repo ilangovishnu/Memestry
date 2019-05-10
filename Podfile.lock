@@ -76,6 +76,7 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - ProgressHUD (2.60)
 
 DEPENDENCIES:
   - AlamofireImage
@@ -83,6 +84,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - ProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -101,6 +103,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - ProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
@@ -118,7 +121,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  ProgressHUD: 4e4efbaf4f5de8bd32e0c4c3b6644a90ea1a8c3e
 
-PODFILE CHECKSUM: e1fec446afc26f03af0f412ba9cd9c807ebffc1a
+PODFILE CHECKSUM: 0f9a94f65a1fb6c92b6340db420a6c4fd247b207
 
 COCOAPODS: 1.5.3

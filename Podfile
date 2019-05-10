@@ -11,7 +11,8 @@ target 'Memestry' do
    pod 'Firebase/Database'
    pod  'Firebase/Storage'
    pod  'AlamofireImage'
-
+   pod 'ProgressHUD'
+   
   target 'MemestryTests' do
     inherit! :search_paths
     # Pods for testing
