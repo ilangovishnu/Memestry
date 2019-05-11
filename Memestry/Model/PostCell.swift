@@ -16,12 +16,14 @@ class PostCell: UITableViewCell {
     }
 
     
-    @IBOutlet weak var newPosterView: UIImageView!
+    @IBOutlet weak var posterView: UIImageView!
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    @IBOutlet weak var captionLabel: UILabel!
+    
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        // Configure the view for the selected state
+//    }
 
 }
