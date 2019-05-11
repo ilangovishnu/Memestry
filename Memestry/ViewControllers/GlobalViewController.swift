@@ -27,7 +27,9 @@ class GlobalViewController: UIViewController, UITableViewDataSource, UITableView
         // Do any additional setup after loading the view.
         //https://api.giphy.com/v1/gifs/search?api_key=0Fn6uXrY8pgsMbxZoyjRID0P1ZuxdOEA&q=memes
         //https://api.tumblr.com/v2/tagged?tag=meme&api_key=Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV
-        let url = URL(string: "https://api.tumblr.com/v2/blog/daily-meme.tumblr.com/posts/photo?api_key=Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV")!
+        //https://api.tumblr.com/v2/blog/funny-meme-pictures.tumblr.com/posts/photo?api_key=Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV
+        //https://api.tumblr.com/v2/blog/freshest-memes.tumblr.com/posts/photo?api_key=Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV
+        let url = URL(string: "https://api.tumblr.com/v2/blog/funny-meme-pictures.tumblr.com/posts/photo?api_key=Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV")!
         
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
