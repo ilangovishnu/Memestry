@@ -38,10 +38,10 @@ A curated ios app for posting & commenting on memes. Users can view others memes
 - [x] User data stored in Firebase
 - [x] User can post a meme
 - [x] User can add a caption to a meme
-- [x] User can comment a meme
-- [x] User can like a meme
+- [x] User can follow other users
+- [x] User can view other memestry users
 - [x] User can view latest 25 from meme feed
-- [x] User can view global meme feed
+- [x] User can view global meme feed (Real time api integration)
 
 
 **Optional Nice-to-have Stories**
