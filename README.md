@@ -103,7 +103,7 @@ A curated ios app for posting & commenting on memes. Users can view others memes
 #### HOME SCREEN
 <img src="https://i.imgur.com/7wtbcV9.png" width=250><br>
 #### INTERACTIVE SCREEN
-<img src="http://g.recordit.co/zEDvUCynUv.gif" width=250><br>
+<img src="http://g.recordit.co/iYgggerzEK.gif" width=250><br>
 
 
  
