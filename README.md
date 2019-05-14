@@ -1,5 +1,5 @@
 # Memestry
-Unit 8 - Group Milestone - README
+README
 ===
 
 # Memestry
@@ -98,10 +98,6 @@ A curated ios app for posting & commenting on memes. Users can view others memes
 <img src="https://i.imgur.com/cnPToVh.png" width=250><br>
 #### SIGNUP SCREEN
 <img src="https://i.imgur.com/mVYhyeD.png" width=250><br>
-#### GLOBAL FEED SCREEN (COLLECTION VIEW)
-<img src="https://i.imgur.com/n34rOBp.png" width=250><br>
-#### HOME SCREEN
-<img src="https://i.imgur.com/7wtbcV9.png" width=250><br>
 #### INTERACTIVE SCREEN
 <img src="http://g.recordit.co/iYgggerzEK.gif" width=250><br>
 
